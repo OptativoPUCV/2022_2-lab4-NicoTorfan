@@ -79,7 +79,7 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * searchMap(HashMap * map,  char * key) {   
   long index =hash(key, map->capacity);
-  Pair * elemento = NULL;
+  Pair* elemento = NULL;
   while (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
     if (is_equal(key, map->buckets[index]->key) == 1){
     elemento=map->buckets[index];
@@ -87,8 +87,9 @@ Pair * searchMap(HashMap * map,  char * key) {
     return elemento;
     }
 
-    return NULL;
+    index= (index+1)% map->capacity;
 }
+  return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
