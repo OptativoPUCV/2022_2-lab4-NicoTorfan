@@ -53,4 +53,42 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
     else map->buckets[index] = createPair(key, value);
     map->size++;
-  } 
+}
+
+
+void enlarge(HashMap * map) {
+    enlarge_called = 1; //no borrar (testing purposes)
+
+
+}
+
+
+HashMap * createMap(long capacity) {
+  HashMap * map = (HashMap *)malloc(capacity*(sizeof(HashMap)));
+  map->capacity=capacity;
+  map->buckets= (Pair **)malloc(capacity * sizeof(Pair*));
+  map->size=0;
+  map->current=-1;
+  return map;
+}
+
+void eraseMap(HashMap * map,  char * key) {    
+
+
+}
+
+Pair * searchMap(HashMap * map,  char * key) {   
+
+
+    return NULL;
+}
+
+Pair * firstMap(HashMap * map) {
+
+    return NULL;
+}
+
+Pair * nextMap(HashMap * map) {
+
+    return NULL;
+}

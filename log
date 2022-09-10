@@ -92,3 +92,9 @@ test.c:(.text+0x1122): undefined reference to `enlarge'
 collect2: error: ld returned 1 exit status
 Compilation failed
 5eed83d
+Sat 10 Sep 2022 02:16:19 AM UTC: 
+ hashmap.c | 38 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+ tests:  5|4
+total_score: 30/70
+165b16c
