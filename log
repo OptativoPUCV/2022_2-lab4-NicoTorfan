@@ -20,3 +20,9 @@ hashmap.c:43:8: error: ‘insertMap’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 0e8e0c0
+Sat 10 Sep 2022 02:06:18 AM UTC: 
+ hashmap.c | 2 --
+ 1 file changed, 2 deletions(-)
+ tests:  5|4
+total_score: 30/70
+3068785
