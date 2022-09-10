@@ -84,7 +84,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     if (is_equal(key, map->buckets[index]->key) == 1){
     elemento=map->buckets[index];
     map->current=index;
-    return buscar;
+    return elemento;
     }
 
     return NULL;
