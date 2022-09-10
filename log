@@ -58,3 +58,37 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 2f2d92d
+Sat 10 Sep 2022 02:15:47 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `createMap_test1':
+test.c:(.text+0x39a): undefined reference to `createMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `createMap_test2':
+test.c:(.text+0x3ca): undefined reference to `createMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `createMap_test3':
+test.c:(.text+0x41a): undefined reference to `createMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: test.c:(.text+0x44d): undefined reference to `createMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `search_test1':
+test.c:(.text+0xbe2): undefined reference to `searchMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `search_test2':
+test.c:(.text+0xc9f): undefined reference to `searchMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `search_test3':
+test.c:(.text+0xd17): undefined reference to `searchMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `erase_test1':
+test.c:(.text+0xda2): undefined reference to `eraseMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `erase_test2':
+test.c:(.text+0xe6f): undefined reference to `eraseMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `erase_test3':
+test.c:(.text+0xed2): undefined reference to `eraseMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `first_test':
+test.c:(.text+0xf2b): undefined reference to `firstMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: test.c:(.text+0xf7c): undefined reference to `firstMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `next_test':
+test.c:(.text+0x1013): undefined reference to `nextMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: test.c:(.text+0x1078): undefined reference to `nextMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: test.c:(.text+0x10bc): undefined reference to `nextMap'
+/nix/store/v8imx1nvyz0hgvx9cbcmh6gp4ngw3ffj-binutils-2.35.1/bin/ld: /tmp/ccYPvS78.o: in function `enlarge_test':
+test.c:(.text+0x1122): undefined reference to `enlarge'
+collect2: error: ld returned 1 exit status
+Compilation failed
+5eed83d
