@@ -233,3 +233,13 @@ hashmap.c:62:65: error: expected expression before ‘)’ token
       |                                                                 ^
 Compilation failed
 7baa9f4
+Sat 10 Sep 2022 02:42:06 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:60: error: expected expression before ‘Pair’
+   62 |   map->buckets=realloc(map->buckets,map->capacity * sizeof Pair*);
+      |                                                            ^~~~
+Compilation failed
+001c9bd
