@@ -218,3 +218,18 @@ Sat 10 Sep 2022 02:37:42 AM UTC:
  tests:  11|2
 total_score: 50/70
 81bb5a3
+Sat 10 Sep 2022 02:41:57 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:60: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   62 |   map->buckets=realloc(map->buckets,map->capacity * sizeof pair*);
+      |                                                            ^~~~
+      |                                                            Pair
+hashmap.c:62:60: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:62:65: error: expected expression before ‘)’ token
+   62 |   map->buckets=realloc(map->buckets,map->capacity * sizeof pair*);
+      |                                                                 ^
+Compilation failed
+7baa9f4
