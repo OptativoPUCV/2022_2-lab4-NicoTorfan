@@ -272,3 +272,28 @@ Mon 12 Sep 2022 12:26:18 AM UTC:
  tests:  12|2
 total_score: 50/70
 bd7edf4
+Mon 12 Sep 2022 12:32:49 AM UTC: 
+ hashmap.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:101:7: error: unused variable ‘i’ [-Werror=unused-variable]
+  101 |   int i = 0;
+      |       ^
+hashmap.c: At top level:
+hashmap.c:102:4: error: expected identifier or ‘(’ before ‘while’
+  102 |   }while (i<=map->size){
+      |    ^~~~~
+hashmap.c:108:5: error: expected identifier or ‘(’ before ‘return’
+  108 |   } return NULL;
+      |     ^~~~~~
+hashmap.c:109:1: error: expected identifier or ‘(’ before ‘}’ token
+  109 | }
+      | ^
+hashmap.c: In function ‘firstMap’:
+hashmap.c:102:3: error: control reaches end of non-void function [-Werror=return-type]
+  102 |   }while (i<=map->size){
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+68d1f16
