@@ -260,3 +260,9 @@ hashmap.c:61:11: error: variable ‘aux’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 a4f7845
+Mon 12 Sep 2022 12:20:47 AM UTC: 
+ hashmap.c | 5 -----
+ 1 file changed, 5 deletions(-)
+ tests:  11|2
+total_score: 50/70
+5a242f4
