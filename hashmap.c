@@ -115,5 +115,5 @@ Pair * nextMap(HashMap * map) {
     index= (index+1)% map->capacity;
     map->current = index;
 }
-  return map->buckets[index];
+  return map->buckets[0];
 }
