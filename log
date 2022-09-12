@@ -454,3 +454,33 @@ Mon 12 Sep 2022 12:59:12 AM UTC:
  tests:  14|2
 total_score: 50/70
 affe54f
+Mon 12 Sep 2022 01:01:58 AM UTC: 
+ hashmap.c | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:114:52: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucketsmap’; did you mean ‘buckets’?
+  114 |     if (map->buckets[map->current] != NULL && map->bucketsmap->current]->key != NULL){
+      |                                                    ^~~~~~~~~~
+      |                                                    buckets
+hashmap.c:114:71: error: expected ‘)’ before ‘]’ token
+  114 |     if (map->buckets[map->current] != NULL && map->bucketsmap->current]->key != NULL){
+      |        ~                                                              ^
+      |                                                                       )
+hashmap.c:114:71: error: expected statement before ‘]’ token
+hashmap.c:114:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  114 |     if (map->buckets[map->current] != NULL && map->bucketsmap->current]->key != NULL){
+      |     ^~
+hashmap.c:114:72: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  114 |     if (map->buckets[map->current] != NULL && map->bucketsmap->current]->key != NULL){
+      |                                                                        ^~
+hashmap.c:114:72: error: expected expression before ‘->’ token
+hashmap.c:114:85: error: expected statement before ‘)’ token
+  114 |     if (map->buckets[map->current] != NULL && map->bucketsmap->current]->key != NULL){
+      |                                                                                     ^
+hashmap.c:118:1: error: control reaches end of non-void function [-Werror=return-type]
+  118 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ee4c681
