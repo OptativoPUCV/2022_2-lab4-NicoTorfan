@@ -106,8 +106,6 @@ Pair * firstMap(HashMap * map) {
     index= (index+1)% map->capacity;
      map->current=index;
   } 
-map->current=index;
-return NULL; 
 }
 
 Pair * nextMap(HashMap * map) {
