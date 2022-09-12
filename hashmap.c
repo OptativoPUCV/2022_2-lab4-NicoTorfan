@@ -98,7 +98,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
   map->current=0;
-  index=0;
+  long index=0;
   int i = 0;  
   while (i<=map->size){
     while (1){
