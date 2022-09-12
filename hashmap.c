@@ -103,6 +103,7 @@ Pair * firstMap(HashMap * map) {
   while (i<=map->size){
     while (1){
       if (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
+        map->current=i+1;
         return map->buckets[index];
       }
       index= (index+1)% map->capacity;
