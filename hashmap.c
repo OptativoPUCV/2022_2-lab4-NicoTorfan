@@ -111,7 +111,7 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
  long index=map->capacity;
    while (1){
-    if (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
+    if (map->buckets[index]->key != NULL){
       return map->buckets[index];
     }
     index= (index+1)% map->capacity;
