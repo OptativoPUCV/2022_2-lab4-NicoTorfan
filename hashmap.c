@@ -109,6 +109,10 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
-    return NULL;
+  long index=map->current;
+  index= (index+1)% map->capacity;
+  while (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
+    index= (index+1)% map->capacity;
+}
+  return map->buckets[index];
 }
