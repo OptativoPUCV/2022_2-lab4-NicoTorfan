@@ -314,3 +314,29 @@ hashmap.c:104:17: error: returning ‘Pair **’ from a function with incompatib
 cc1: all warnings being treated as errors
 Compilation failed
 7c92de2
+Mon 12 Sep 2022 12:40:55 AM UTC: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:101:8: error: lvalue required as left operand of assignment
+  101 |   index=0;
+      |        ^
+hashmap.c:105:23: error: array subscript is not an integer
+  105 |       if (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
+      |                       ^
+hashmap.c:105:54: error: array subscript is not an integer
+  105 |       if (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
+      |                                                      ^
+hashmap.c:106:19: error: returning ‘Pair **’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  106 |         return map->buckets;
+      |                ~~~^~~~~~~~~
+hashmap.c:108:23: error: invalid operands to binary % (have ‘char * (*)(const char *, int)’ and ‘long int’)
+  108 |       index= (index+1)% map->capacity;
+      |              ~~~~~~~~~^ ~~~~~~~~~~~~~
+      |                    |       |
+      |                    |       long int
+      |                    char * (*)(const char *, int)
+cc1: all warnings being treated as errors
+Compilation failed
+16dea8a
