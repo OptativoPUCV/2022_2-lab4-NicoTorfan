@@ -99,17 +99,15 @@ Pair * searchMap(HashMap * map,  char * key) {
 Pair * firstMap(HashMap * map) {
   map->current=0;
   long index=0;
-  int i = 0;  
   while (i<=map->size){
     while (1){
       if (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
-        map->current=i+1;
         return map->buckets[index];
       }
       index= (index+1)% map->capacity;
     }
   i++;
-  map->current=i;
+  map->current=index;
   } 
 return NULL; 
 }
