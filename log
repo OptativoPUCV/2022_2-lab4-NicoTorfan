@@ -249,3 +249,14 @@ Sat 10 Sep 2022 02:42:36 AM UTC:
  tests:  11|2
 total_score: 50/70
 602fe4b
+Mon 12 Sep 2022 12:19:55 AM UTC: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:61:11: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   61 |   Pair ** aux;
+      |           ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+a4f7845
