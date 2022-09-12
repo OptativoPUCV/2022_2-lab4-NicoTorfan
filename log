@@ -410,3 +410,35 @@ Mon 12 Sep 2022 12:56:23 AM UTC:
  tests:  13|2
 total_score: 50/70
 5359267
+Mon 12 Sep 2022 12:58:16 AM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:113:22: error: array subscript is not an integer
+  113 |   return map->buckets[index];
+      |                      ^
+hashmap.c:114:22: error: array subscript is not an integer
+  114 |   while (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
+      |                      ^
+hashmap.c:114:53: error: array subscript is not an integer
+  114 |   while (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
+      |                                                     ^
+hashmap.c:115:21: error: invalid operands to binary % (have ‘char * (*)(const char *, int)’ and ‘long int’)
+  115 |     index= (index+1)% map->capacity;
+      |            ~~~~~~~~~^ ~~~~~~~~~~~~~
+      |                  |       |
+      |                  |       long int
+      |                  char * (*)(const char *, int)
+hashmap.c:116:18: error: assignment to ‘long int’ from ‘char * (*)(const char *, int)’ makes integer from pointer without a cast [-Werror=int-conversion]
+  116 |     map->current = index;
+      |                  ^
+hashmap.c:118:22: error: array subscript is not an integer
+  118 |   return map->buckets[index];
+      |                      ^
+hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+28ae76d
