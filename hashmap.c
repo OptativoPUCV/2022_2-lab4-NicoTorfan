@@ -113,6 +113,7 @@ Pair * nextMap(HashMap * map) {
   index= (index+1)% map->capacity;
   while (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
     index= (index+1)% map->capacity;
+    map->current = index;
 }
   return map->buckets[index];
 }
