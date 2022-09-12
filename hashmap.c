@@ -101,7 +101,7 @@ Pair * firstMap(HashMap * map) {
   int i = 0;  
   while (i<=map->size){
     if (map->buckets!=NULL){
-      return map->buckets[0];
+      return map->buckets;
     }
   i++;
   map->current=i;
